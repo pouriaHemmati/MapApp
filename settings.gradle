@@ -1,0 +1,3 @@
+include ':DirectionLib'
+include ':app'
+rootProject.name = "MapTest"

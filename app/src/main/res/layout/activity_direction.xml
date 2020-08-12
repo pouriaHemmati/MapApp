@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnRequestDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:src="@drawable/logo_direction"
+        app:borderWidth="0dp"
+        app:elevation="8dp"
+        app:layout_anchorGravity="bottom|right|end"
+        app:rippleColor="@color/colorPrimary"/>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".MapsActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_circle"
+                        app:tint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/txtOrigin"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="10dp"
+                        android:src="@drawable/ic_two_dot"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="@color/colorPrimary"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_location"
+                        app:tint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/txtDestination"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:background="@color/blue"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/lnrContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar2"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:id="@+id/rltvDriving"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/button_white"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <ImageView
+                    android:id="@+id/imgDriving"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_car"/>
+
+                <TextView
+                    android:id="@+id/txtDriving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/imgDriving"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:text="5 hr 47"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltvWalking"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="16dp"
+                android:background="@drawable/button_white"
+                android:orientation="horizontal"
+                android:weightSum="100">
+
+
+                <ImageView
+                    android:id="@+id/imgWalking"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/ic_man"/>
+
+                <TextView
+                    android:id="@+id/txtWalking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="8dp"
+                    android:layout_toRightOf="@+id/imgWalking"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="7dp"
+                    android:text="5 hr 47"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lnrContainer"
+            tools:context=".MapsActivity"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
